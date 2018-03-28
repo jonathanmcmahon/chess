@@ -17,7 +17,10 @@ void print_board(int *board)
 	    }
 	    printf("-\n");
 	}
-	printf("|  ");
+	char piece = RANK_SYMBOL[board[i]];
+	putchar('|'); 
+	putchar(piece);
+	putchar(' ');
     }
     printf("|\n");
     for (int i = 0; i < N_COLS; i++)
