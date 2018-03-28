@@ -1,12 +1,12 @@
-HEADERS = chess.h headers.h
-OBJECTS = chess.o
+HEADERS = chess.h display.h constants.h
+OBJECTS = chess.o display.o
 
 default: chess
 
 %.o: %.c $(HEADERS)
 	gcc -c $< -o $@
 
-program: $(OBJECTS)
+chess: $(OBJECTS)
 	gcc $(OBJECTS) -o $@
 
 clean:

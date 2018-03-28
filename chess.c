@@ -1,9 +1,6 @@
 #include <stdio.h>
-
-#define INVALID_LOC -1
-#define N_ROWS 16
-#define N_COLS 16
-#define N_SQUARES 64
+#include "constants.h"
+#include "display.h"
 
 int get_loc(char dir, int current_loc)
 {
@@ -44,6 +41,10 @@ int main()
 
     int j = get_loc('u', 3);
     printf("%d\n", j);
+
+    printf("Printing board:");
+
+    print_board(board);
 }
 
 
