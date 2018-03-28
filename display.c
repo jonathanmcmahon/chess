@@ -4,29 +4,27 @@
 void print_board(int *board)
 {
     printf("\n");
+    
+    // Top of board
+    printf("╔══╦══╦══╦══╦══╦══╦══╦══╗\n");
+
     for (int i = 0; i < N_SQUARES; i++)
     {
-	if (!(i % N_COLS))
+	if (!(i % N_COLS)) // Go to next row
 	{
 	    if (i) {
-		printf("|\n");
+		printf("║\n");
+		printf("╠══╬══╬══╬══╬══╬══╬══╬══╣\n");
 	    }
-	    for (int j = 0; j < N_COLS; j++)
-	    {
-		printf("---");
-	    }
-	    printf("-\n");
 	}
+	// Print chess piece symbol
 	char piece = RANK_SYMBOL[board[i]];
-	putchar('|'); 
+	printf("║"); 
 	putchar(piece);
 	putchar(' ');
     }
-    printf("|\n");
-    for (int i = 0; i < N_COLS; i++)
-    {
-	printf("---");
-    }
-    printf("-\n");
+    // Bottom of board
+    printf("║\n");
+    printf("╚══╩══╩══╩══╩══╩══╩══╩══╝\n");
     
 }
