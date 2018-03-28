@@ -11,9 +11,9 @@ int get_loc(char dir, int current_loc)
 
     switch(dir)
     {
-	case 'u': diff = -16;
+	case 'u': diff = -N_COLS;
 		  break;
-	case 'd': diff = 16;
+	case 'd': diff = N_COLS;
 		  break;
 	case 'l': diff = -1;
 		  break;
