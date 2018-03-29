@@ -6,7 +6,8 @@ void print_board(int *board)
     printf("\n");
     
     // Top of board
-    printf("╔══╦══╦══╦══╦══╦══╦══╦══╗\n");
+    printf("  a  b  c  d  e  f  g  h\n");
+    printf(" ╔══╦══╦══╦══╦══╦══╦══╦══╗\n8");
 
     for (int i = 0; i < N_SQUARES; i++)
     {
@@ -14,7 +15,8 @@ void print_board(int *board)
 	{
 	    if (i) {
 		printf("║\n");
-		printf("╠══╬══╬══╬══╬══╬══╬══╬══╣\n");
+    	    	printf(" ╠══╬══╬══╬══╬══╬══╬══╬══╣\n");
+		printf("%d", (N_SQUARES - i) / 8);
 	    }
 	}
 	// Print chess piece symbol
@@ -25,6 +27,6 @@ void print_board(int *board)
     }
     // Bottom of board
     printf("║\n");
-    printf("╚══╩══╩══╩══╩══╩══╩══╩══╝\n");
+    printf(" ╚══╩══╩══╩══╩══╩══╩══╩══╝\n");
     
 }
