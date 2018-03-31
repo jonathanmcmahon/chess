@@ -35,7 +35,18 @@ int main()
 {
 
     printf("Chess\n");
-    int board[N_SQUARES] = { 0 };
+
+    // Initalize board
+    int board[N_SQUARES];
+    for (int i = 0; i < N_SQUARES; i++)
+    {
+	board[i] = -1;
+    }
+
+    // Set up test game state
+    int state[34] = { 0 };
+    state[10] = -1;
+
 
     printf("%d",board[0]);
 
@@ -43,8 +54,8 @@ int main()
     printf("%d\n", j);
 
     printf("Printing board:");
+    print_board(board, state);
 
-    print_board(board);
 }
 
 
