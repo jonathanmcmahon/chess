@@ -64,8 +64,13 @@ void print_board(int *board, int *state)
 	if (board[i] != EMPTY_SQUARE) {
 	    piece = RANK_SYMBOL[board[i]];
 	}
-	printf("║"); 
+	printf("║");
+	if (board[i] < 16)
+	{
+	    printf("%s", KRED);
+	}
 	putchar(piece);
+	printf("%s", KWHT);
 	putchar(' ');
     }
     // Bottom of board
