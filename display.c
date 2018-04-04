@@ -65,12 +65,12 @@ void print_board(int *board, int *state)
 	    piece = RANK_SYMBOL[board[i]];
 	}
 	printf("║");
-	if (board[i] < 16)
+	if (board[i] < P2_START_IDX)
 	{
 	    printf("%s", KRED);
 	}
 	putchar(piece);
-	printf("%s", KWHT);
+	printf("%s", KNRM);
 	putchar(' ');
     }
     // Bottom of board

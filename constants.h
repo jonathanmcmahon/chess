@@ -2,10 +2,15 @@
 #define CHESS_CONST_
 
 #define INVALID_LOC -1
+#define OK 200
 #define N_ROWS 8
 #define N_COLS 8
 #define N_SQUARES 64
 
+#define D_UP 'u'
+#define D_DOWN 'd'
+#define D_LEFT 'l'
+#define D_RIGHT 'r'
 
 #define K 6
 #define Q 5
